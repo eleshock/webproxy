@@ -1,12 +1,14 @@
+
+   
 # Makefile for Proxy Lab 
 #
 # You may modify this file any way you like (except for the handin
 # rule). You instructor will type "make" on your specific Makefile to
 # build your proxy from sources.
 
-CC = gcc
-CFLAGS = -g -Wall
-LDFLAGS = -lpthread
+CC = gcc # C 컴파일러
+CFLAGS = -g -Wall # gcc의 옵션을 추가할 때 사용 # -g : 디버그 정보 표시 , -Wall : 컴파일 시, 컴파일이 되지 않을 정도의 오류라도 모두 출력
+LDFLAGS = -lpthread #ld(링커)의 옵션세팅 #-lpthread = pthread 라이브러리를 포함 시키겠다.
 
 all: proxy
 
@@ -26,4 +28,3 @@ handin:
 
 clean:
 	rm -f *~ *.o proxy core *.tar *.zip *.gzip *.bzip *.gz
-
